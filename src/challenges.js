@@ -9,13 +9,9 @@ const splitSentence = (stringToSplit) => stringToSplit.split(' ');
 
 // Desafio 4
 const concatName = (arrayComNomes) => `${arrayComNomes[arrayComNomes.length - 1]}, ${arrayComNomes[0]}`;
-console.log(concatName(['Nuwanda', 'Morato']));
 
 // Desafio 5
-function footballPoints(wins, ties) {
-  let score = wins * 3 + ties * 1;
-  return score;
-}
+const footballPoints = (wins, ties) => wins * 3 + ties;
 
 // Desafio 6
 function highestCount(mostRepeated) {
