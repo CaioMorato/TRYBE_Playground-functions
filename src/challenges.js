@@ -1,11 +1,9 @@
 // Desafio 1
 const compareTrue = (bool, boolean) => ((bool && boolean) === true ? true : false);
-console.log(compareTrue(true, true))
+console.log(compareTrue(true, true));
 
 // Desafio 2
-function calcArea(base, height) {
-  return (base * height) / 2;
-}
+const calcArea = (base, height) => (base * height) / 2;
 
 // Desafio 3
 function splitSentence(stringToSplit) {
