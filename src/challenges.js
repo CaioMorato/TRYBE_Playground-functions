@@ -34,7 +34,7 @@ function catAndMouse(mouse, cat1, cat2) {
   // Transform the distance into positive number, there's no negative distance
   cat1Wins < 0 ? (cat1Wins *= -1) : cat1Wins;
   cat2Wins < 0 ? (cat2Wins *= -1) : cat2Wins;
-  // Conditional that returns who gets the mouse
+  // Conditional that returns who catches the mouse
   if (cat1Wins < cat2Wins) 'cat1';
   else if (cat2Wins < cat1Wins) 'cat2';
   else 'os gatos trombam e o rato foge';
@@ -42,21 +42,21 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(fizzBuzzArray) {
-  // Run the array
-  // The conditionals change the array in the position 'checker' to what is written
-  for (let checker = 0; checker < fizzBuzzArray.length; checker += 1) {
-    if (fizzBuzzArray[checker] % 3 === 0 && fizzBuzzArray[checker] % 5 === 0) {
-      fizzBuzzArray[checker] = 'fizzBuzz';
-    } else if (fizzBuzzArray[checker] % 3 === 0) {
-      fizzBuzzArray[checker] = 'fizz';
-    } else if (fizzBuzzArray[checker] % 5 === 0) {
-      fizzBuzzArray[checker] = 'buzz';
+  const newFizzBuzz = [];
+  for (let checker of fizzBuzzArray) {
+    if (checker % 3 === 0 && checker % 5 === 0) {
+      newFizzBuzz.push('fizzbuzz');
+    } else if (checker % 3 === 0) {
+      newFizzBuzz.push('fizz');
+    } else if (checker % 5 === 0) {
+      newFizzBuzz.push('buzz');
     } else {
-      fizzBuzzArray[checker] = 'bug!';
+      newFizzBuzz.push('bug!');
     }
   }
-  return fizzBuzzArray;
+  return newFizzBuzz;
 }
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode(stringToEncode) {
