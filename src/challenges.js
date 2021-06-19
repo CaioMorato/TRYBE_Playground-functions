@@ -6,9 +6,7 @@ console.log(compareTrue(true, true));
 const calcArea = (base, height) => (base * height) / 2;
 
 // Desafio 3
-function splitSentence(stringToSplit) {
-  return stringToSplit.split(' ');
-}
+const splitSentence = (stringToSplit) => stringToSplit.split(' ');
 
 // Desafio 4
 function concatName(arrayComNomes) {
