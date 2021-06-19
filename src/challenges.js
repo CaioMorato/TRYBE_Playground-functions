@@ -14,25 +14,17 @@ const concatName = (arrayComNomes) => `${arrayComNomes[arrayComNomes.length - 1]
 const footballPoints = (wins, ties) => wins * 3 + ties;
 
 // Desafio 6
-function highestCount(mostRepeated) {
-  // Variable to store the highest number
-  let higher = mostRepeated[0];
-  // Variable to count the repetition
+const highestCount = (mostRepeated) => {
+  const higher = Math.max(...mostRepeated);
+
   let count = 0;
-  // Loop to search the highest number
-  for (let highestNumber of mostRepeated) {
-    if (highestNumber > higher) {
-      higher = highestNumber;
-    }
-  }
-  // Count the repetitions of the highest number
   for (let score of mostRepeated) {
     if (score === higher) {
       count += 1;
     }
   }
   return count;
-}
+};
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
