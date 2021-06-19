@@ -28,24 +28,16 @@ const highestCount = (mostRepeated) => {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  // Calculate the distance between catX and the mouse
+  // Calculate the distance between each cat and the mouse
   let cat1Wins = cat1 - mouse;
   let cat2Wins = cat2 - mouse;
   // Transform the distance into positive number, there's no negative distance
-  if (cat1Wins < 0) {
-    cat1Wins = cat1Wins * -1;
-  }
-  if (cat2Wins < 0) {
-    cat2Wins = cat2Wins * -1;
-  }
+  cat1Wins < 0 ? (cat1Wins *= -1) : cat1Wins;
+  cat2Wins < 0 ? (cat2Wins *= -1) : cat2Wins;
   // Conditional that returns who gets the mouse
-  if (cat1Wins < cat2Wins) {
-    return 'cat1';
-  } else if (cat2Wins < cat1Wins) {
-    return 'cat2';
-  } else {
-    return 'os gatos trombam e o rato foge';
-  }
+  if (cat1Wins < cat2Wins) 'cat1';
+  else if (cat2Wins < cat1Wins) 'cat2';
+  else 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
