@@ -1,6 +1,5 @@
 // Desafio 1
 const compareTrue = (bool, boolean) => ((bool && boolean) === true ? true : false);
-console.log(compareTrue(true, true));
 
 // Desafio 2
 const calcArea = (base, height) => (base * height) / 2;
@@ -9,10 +8,8 @@ const calcArea = (base, height) => (base * height) / 2;
 const splitSentence = (stringToSplit) => stringToSplit.split(' ');
 
 // Desafio 4
-function concatName(arrayComNomes) {
-  let fullName = arrayComNomes[arrayComNomes.length - 1] + ', ' + arrayComNomes[0];
-  return fullName;
-}
+const concatName = (arrayComNomes) => `${arrayComNomes[arrayComNomes.length - 1]}, ${arrayComNomes[0]}`;
+console.log(concatName(['Nuwanda', 'Morato']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
